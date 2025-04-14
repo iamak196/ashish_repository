@@ -1,0 +1,12 @@
+<template>
+    <lightning-card title="Weather Info">
+        <template if:true={weather}>
+            <div class="slds-p-around_medium">
+                <img src={weather.iconUrl} alt={weather.condition} />
+                <p>{weather.condition}</p>
+                <p>{weather.temperature} °C</p>
+                <lightning-button label="Refresh Weather" onclick={handleRefresh}></lightning-button>
+            </div>
+        </template>
+    </lightning-card>
+</template>
